@@ -1,0 +1,73 @@
+.home {
+  $dashLength:  1080px;
+  width: 100%;
+  padding: 0 0 20px 0;
+  position: relative;
+  overflow: hidden;
+
+  .contentHome {
+    p {
+      max-width: 768px;
+      position: relative;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 2rem;
+    }
+  }
+
+  .home-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: $black;
+    opacity: .4;
+  }
+
+  #welcome {
+    width: 70%;
+
+    path {
+      stroke-dasharray: $dashLength;
+      stroke-dashoffset: $dashLength;
+      
+
+      &:nth-child(1) {
+        animation:line-anim 2s ease forwards /* infinite */;
+      }
+
+      &:nth-child(2) {
+        animation:line-anim 3s ease forwards 0.3s ;
+      }
+
+      &:nth-child(3) {
+      animation:line-anim 2s ease forwards 0.6s;
+      }
+
+      &:nth-child(4) {
+        animation:line-anim 2s ease forwards 0.9s;
+      }
+
+      &:nth-child(5) {
+        animation:line-anim 2s ease forwards 1.2s;
+      }
+
+      &:nth-child(6) {
+        animation:line-anim 2s ease forwards 1.5s;
+      }
+
+      &:nth-child(7) {
+        animation:line-anim 2s ease forwards 1.8s;
+      }
+    }
+  }
+    
+    @keyframes line-anim {
+      from{
+        stroke-dashoffset: $dashLength;
+      }
+    
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+}

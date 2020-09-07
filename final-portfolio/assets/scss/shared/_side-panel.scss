@@ -1,0 +1,69 @@
+.side-panel {
+  display: none;
+  background-color: $white;
+  overflow: hidden;
+  position: fixed;
+  height: calc(100% - #{$header-height});
+  @include primary-gradient;
+  top: $header-height;
+  z-index: 900;
+
+
+  @include media-desktop {
+    display: flex;
+    flex-wrap: wrap;
+    width: $side-panel-width;
+  }
+
+  .social-menu {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 0 0 1rem;
+  }
+
+  .social-menu-list {
+    width: 100%;
+    overflow: hidden;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .social-menu-item {
+    width: 100%;
+    display: block;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .social-menu-item:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .social-menu-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 4px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+
+    @include hover-focus {
+      background: $purple;
+    }
+  }
+
+  .social-menu-image {
+    width: 90%;
+  }
+}
+
+/* creates styles for the side panel in both  mobile and desktop views */

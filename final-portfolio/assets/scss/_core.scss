@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+/* basic styling for the core body of the site */
+body {
+  padding: 0;
+  line-height: 1;
+  font-family: 'Raleway', helvetica, arial, sans-serif;
+  font-size: 16px;
+  color: $white;
+  width: 100%;
+  margin: 0;
+  @include primary-gradient;
+}
+
+.page-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+.container {
+  @include container;
+}

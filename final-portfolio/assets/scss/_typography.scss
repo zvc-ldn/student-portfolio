@@ -1,0 +1,31 @@
+h1 {
+  @include heading-1; /* here we take the styling specified in _mixins.scss and apply it to the default semantic  markup tags */
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.heading-hidden {
+  display: none;
+}
+
+h2 {
+  @include heading-2;
+}
+
+h3 {
+  @include heading-3;
+}
+
+p {
+  margin-top: 0;
+  width: 100%;
+  line-height: 1.5; /* specifies paragraph formatting */
+}
+
+a {
+  color: white;
+
+  @include hover-focus { /* takes the styling specified in _mixins.scss and applies it to all anchor tags */
+    text-decoration: none;
+  }
+}

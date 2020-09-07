@@ -1,0 +1,100 @@
+@mixin hover {  /* mixins allow for css code to be written and reused throughout the site via the includes in the php files */
+  &:hover { /* this file contains all the mixins for the site to avoid duplicate code */
+    @content;
+  }
+}
+
+@mixin hover-focus {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin media-big-desktop {
+  @media only screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin container {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+@mixin primary-gradient {
+  /* Old browsers */
+  background: $dark-gray-1;
+  /* FF3.6-15 */
+  background: -moz-linear-gradient(45deg, $dark-gray-1 0%, $dark-gray-2 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(45deg, $dark-gray-1 0%, $dark-gray-2 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: linear-gradient(45deg, $dark-gray-1 0%, $dark-gray-2 100%);
+}
+
+@mixin reverse-gradient {
+  /* Old browsers */
+  background: $dark-gray-2;
+  /* FF3.6-15 */
+  background: -moz-linear-gradient(45deg, $dark-gray-2 0%, $dark-gray-1 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(45deg, $dark-gray-2 0%, $dark-gray-1 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: linear-gradient(45deg, $dark-gray-2 0%, $dark-gray-1 100%);
+}
+
+@mixin heading-core {
+  text-decoration: none;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+@mixin heading-1 {
+  @include heading-core;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+@mixin heading-2 {
+  @include heading-core;
+  font-size: 2rem;
+}
+
+@mixin heading-3 {
+  @include heading-core;
+}
+
+@mixin heading-4 {
+  @include heading-core;
+  font-size: .9rem;
+}
+
+@mixin heading-5 {
+  @include heading-core;
+  font-size: .8rem;
+}
+
+@mixin heading-6 {
+  @include heading-core;
+  font-size: .6rem;
+}

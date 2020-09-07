@@ -1,0 +1,11 @@
+.primary-footer {
+  width: 100%;
+  //background-color: $dark-gray-2;
+  @include primary-gradient;
+  padding: 1rem 0;
+
+  p {
+    text-align: center;
+    color: $white;
+  }
+}

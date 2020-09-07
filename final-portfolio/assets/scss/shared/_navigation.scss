@@ -1,0 +1,27 @@
+.primary-navigation {
+  width: 100%;
+  text-align: right;
+  margin-left: auto;
+
+  .menu {
+    width: 100%;
+    list-style-type: none; /* gets rid of default styling */
+  }
+
+  .menu-item {
+    display: inline-block;
+  }
+
+  .menu-link {
+    padding: 0 1rem;
+    display: block;
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase; /* makes all text uppercase for th nav */
+    letter-spacing: 2px;
+
+    @include hover-focus {
+      text-decoration: underline; /* makes all items in nav underline when hovered or clicked */
+    }
+  }
+}

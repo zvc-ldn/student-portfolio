@@ -1,0 +1,25 @@
+// Setup
+@import "./variables";
+@import "./utils/mixins";
+
+// Core
+@import "./core";
+@import "./typography";
+@import "./elements";
+
+// Shared
+@import "./shared/header";
+@import "./shared/navigation";
+@import "./shared/mobile-menu";
+@import "./shared/side-panel";
+@import "./shared/main";
+@import "./shared/footer";
+
+// Components
+@import "./components/hero";
+@import "./components/portfolio";
+@import "./components/blog";
+@import "./components/content-block";
+
+
+// Where all styles for the website are brought together  using the import rule

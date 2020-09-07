@@ -1,0 +1,88 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .8rem 1.2rem;
+  user-select: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  transition: .4s all;
+}
+
+.button-image {
+  width: 32px;
+  height: auto;
+  margin-left: 1rem;
+}
+
+.button-black {
+  background-color: $black;
+  color: $white;
+
+  @include hover-focus { /* using includes to import mixins */
+    background-color: transparent;
+  }
+}
+
+.button-purple {
+  background-color: $purple;
+  color: $white;
+
+  @include hover-focus {
+    background-color: transparent; /* makes button transparent on hover or click */
+  }
+}
+
+.button-transparent {
+  background-color: transparent;
+  color: $white;
+  text-transform: none;
+  border-bottom: transparent 3px solid;
+
+  @include hover-focus {
+    border-bottom-color: $white;
+  }
+}
+
+.button-white {
+  background-color: $white;
+  color: $black;
+
+  @include hover-focus {
+    background-color: transparent;
+    color: $white;
+  }
+}
+
+/* -------- Form --------- */
+
+.form {
+  width: 100%;
+  overflow: hidden; /* stops content spilling out its container */
+}
+
+.form-label {
+  width: 100%;
+  display: block;
+  margin-bottom: .5rem;
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.form-input {
+  width: 100%;
+  display: block;
+  margin-bottom: 1.5rem;
+  padding: .5rem;
+}
+
+.form-textarea {
+  max-width: 100%;
+  min-width: 100%;
+}

@@ -1,0 +1,16 @@
+.main {
+  width: 100%;
+  padding-top: $header-height;
+  position: relative;
+
+  @include media-desktop {
+    padding-left: $side-panel-width;
+  }
+
+  h1 {
+    margin-top: 30px;
+  }
+}
+
+/* styles for the main container which has a 'roof' at the bottom of the header and a 'wall' at the rights side of  the side panel
+   the remaining space is available for other content */
